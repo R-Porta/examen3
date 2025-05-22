@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Título</title>
+<script>
+    function calcEdad(nacimiento) {
+        var nac = new Date(nacimiento);
+        var edadMilisegundos = Date.now() - nac.getTime();
+        var edadAnos = edadMilisegundos / (1000 * 60 * 60 * 24 * 365);
+        return Math.floor(edadAnos)
+    }
+    var nacimiento = prompt("Inserte su fecha de nacimiento (YYYY/MM/DD)");
+    var edad = calcEdad(nacimiento);
+    alert('Tienes ' + edad + ' años.')
+</script>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
